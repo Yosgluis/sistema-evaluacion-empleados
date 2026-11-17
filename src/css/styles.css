@@ -1,0 +1,618 @@
+/* ==========================================================================
+   styles.css — Premium Consultores | Sistema de Evaluación 360°
+   Diseño UI/UX corporativo: sobrio, limpio y responsivo.
+   Sin dependencias externas.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES CSS CORPORATIVAS
+   -------------------------------------------------------------------------- */
+
+:root {
+  /* Paleta principal */
+  --color-primario:        #1a2744;   /* Azul marino corporativo */
+  --color-secundario:      #2c4a8c;   /* Azul medio */
+  --color-acento:          #c8a84b;   /* Dorado Premium */
+  --color-acento-hover:    #a8882e;
+
+  /* Fondos y superficies */
+  --color-fondo:           #f0f2f5;
+  --color-superficie:      #ffffff;
+  --color-borde:           #dde1e9;
+
+  /* Texto */
+  --color-texto:           #1e2432;
+  --color-texto-suave:     #5c6478;
+  --color-texto-blanco:    #ffffff;
+
+  /* Estados de decisión */
+  --color-ascender:        #15803d;   /* Verde — ASCENDER */
+  --color-ascender-bg:     #f0fdf4;
+  --color-ascender-borde:  #86efac;
+  --color-despedir:        #b91c1c;   /* Rojo — DESPEDIR */
+  --color-despedir-bg:     #fff1f2;
+  --color-despedir-borde:  #fca5a5;
+  --color-mantener:        #b45309;   /* Ámbar — MANTENER_EN_PUESTO */
+  --color-mantener-bg:     #fffbeb;
+  --color-mantener-borde:  #fcd34d;
+
+  /* Errores de validación */
+  --color-error:           #c0392b;
+  --color-error-bg:        #fff5f5;
+  --color-error-borde:     #feb2b2;
+
+  /* Tipografía */
+  --fuente-principal:      'Segoe UI', system-ui, -apple-system, sans-serif;
+  --fuente-mono:           'Consolas', 'Courier New', monospace;
+
+  /* Espaciado */
+  --espacio-xs:            0.25rem;
+  --espacio-sm:            0.5rem;
+  --espacio-md:            1rem;
+  --espacio-lg:            1.5rem;
+  --espacio-xl:            2rem;
+  --espacio-2xl:           3rem;
+
+  /* Forma */
+  --radio-sm:              4px;
+  --radio-md:              8px;
+  --radio-lg:              12px;
+
+  /* Sombras */
+  --sombra-card:           0 2px 8px rgba(26, 39, 68, 0.08),
+                           0 1px 2px rgba(26, 39, 68, 0.04);
+  --sombra-card-hover:     0 4px 16px rgba(26, 39, 68, 0.12),
+                           0 2px 4px rgba(26, 39, 68, 0.06);
+
+  /* Transiciones */
+  --transicion:            150ms ease-in-out;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET Y BASE
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Clase utilitaria de accesibilidad */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Clase utilitaria de visibilidad */
+.hidden {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. ENCABEZADO CORPORATIVO
+   -------------------------------------------------------------------------- */
+
+.site-header {
+  background-color: var(--color-primario);
+  color: var(--color-texto-blanco);
+  padding: var(--espacio-md) var(--espacio-xl);
+  border-bottom: 3px solid var(--color-acento);
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-lg);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-sm);
+  flex-shrink: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding-right: var(--espacio-lg);
+}
+
+.brand-icon {
+  font-size: 1.75rem;
+  color: var(--color-acento);
+  line-height: 1;
+}
+
+.brand-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-acento);
+  white-space: nowrap;
+}
+
+.header-title h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.header-subtitle {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   4. CONTENIDO PRINCIPAL Y TARJETAS
+   -------------------------------------------------------------------------- */
+
+.site-main {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--espacio-xl) var(--espacio-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xl);
+}
+
+.card {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-lg);
+  box-shadow: var(--sombra-card);
+  overflow: hidden;
+  transition: box-shadow var(--transicion);
+}
+
+.card-header {
+  padding: var(--espacio-lg) var(--espacio-xl);
+  border-bottom: 1px solid var(--color-borde);
+  background-color: #f8f9fb;
+}
+
+.card-header h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
+.card-descripcion {
+  font-size: 0.875rem;
+  color: var(--color-texto-suave);
+  margin-top: var(--espacio-xs);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   5. FORMULARIO DE EVALUACIÓN
+   -------------------------------------------------------------------------- */
+
+#evaluacion-form {
+  padding: var(--espacio-xl);
+}
+
+/* Grid de 2 columnas en pantallas medianas+ */
+.campos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-lg);
+  border: none;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  .campos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* El quinto campo (impar) ocupa toda la fila */
+  .campo-grupo:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Grupo de campo individual */
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+}
+
+.campo-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.campo-nombre {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--color-primario);
+}
+
+.campo-desc {
+  font-size: 0.775rem;
+  color: var(--color-texto-suave);
+  line-height: 1.4;
+}
+
+.campo-input-wrap {
+  position: relative;
+}
+
+.campo-input {
+  width: 100%;
+  padding: var(--espacio-sm) var(--espacio-md);
+  border: 1.5px solid var(--color-borde);
+  border-radius: var(--radio-md);
+  font-family: var(--fuente-principal);
+  font-size: 1rem;
+  color: var(--color-texto);
+  background-color: var(--color-superficie);
+  transition: border-color var(--transicion), box-shadow var(--transicion);
+  -moz-appearance: textfield;      /* Firefox: oculta flechas nativas */
+  appearance: textfield;
+}
+
+/* Ocultar flechas nativas en Chrome/Safari */
+.campo-input::-webkit-outer-spin-button,
+.campo-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.campo-input::placeholder {
+  color: #b0b8c9;
+}
+
+.campo-input:focus {
+  outline: none;
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 0 3px rgba(44, 74, 140, 0.15);
+}
+
+/* Estado de error */
+.campo-grupo.con-error .campo-input {
+  border-color: var(--color-error-borde);
+  background-color: var(--color-error-bg);
+}
+
+.campo-grupo.con-error .campo-input:focus {
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15);
+}
+
+.campo-error {
+  font-size: 0.775rem;
+  color: var(--color-error);
+  font-weight: 500;
+  min-height: 1rem;
+  display: block;
+}
+
+/* Acciones del formulario */
+.form-actions {
+  display: flex;
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-xl);
+  flex-wrap: wrap;
+}
+
+/* Botones */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacio-sm);
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radio-md);
+  font-family: var(--fuente-principal);
+  font-size: 0.925rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color var(--transicion),
+              border-color var(--transicion),
+              color var(--transicion),
+              box-shadow var(--transicion);
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary {
+  background-color: var(--color-primario);
+  color: var(--color-texto-blanco);
+  border-color: var(--color-primario);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: var(--color-secundario);
+  border-color: var(--color-secundario);
+  box-shadow: 0 4px 12px rgba(44, 74, 140, 0.3);
+  outline: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-texto-suave);
+  border-color: var(--color-borde);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background-color: var(--color-fondo);
+  border-color: var(--color-secundario);
+  color: var(--color-secundario);
+  outline: none;
+}
+
+.btn-icon {
+  font-size: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. SECCIÓN DE RESULTADO
+   -------------------------------------------------------------------------- */
+
+.resultado-header {
+  background: linear-gradient(135deg, #f8f9fb 0%, #eef1f7 100%);
+}
+
+/* Badge de decisión */
+.decision-container {
+  padding: var(--espacio-xl);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.decision-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacio-sm);
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;   /* Píldora */
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: var(--espacio-md);
+  border: 1px solid;
+}
+
+/* Variantes por decisión */
+.decision-badge.badge-ascender {
+  background-color: var(--color-ascender-bg);
+  color: var(--color-ascender);
+  border-color: var(--color-ascender-borde);
+}
+
+.decision-badge.badge-despedir {
+  background-color: var(--color-despedir-bg);
+  color: var(--color-despedir);
+  border-color: var(--color-despedir-borde);
+}
+
+.decision-badge.badge-mantener {
+  background-color: var(--color-mantener-bg);
+  color: var(--color-mantener);
+  border-color: var(--color-mantener-borde);
+}
+
+.decision-icono {
+  font-size: 1.1rem;
+}
+
+.decision-texto {
+  font-size: 0.95rem;
+}
+
+.decision-justificacion {
+  font-size: 0.925rem;
+  color: var(--color-texto-suave);
+  line-height: 1.65;
+  max-width: 70ch;
+  border-left: 3px solid var(--color-acento);
+  padding-left: var(--espacio-md);
+}
+
+/* --------------------------------------------------------------------------
+   7. RESUMEN DE PUNTAJES
+   -------------------------------------------------------------------------- */
+
+.resumen-container {
+  padding: var(--espacio-lg) var(--espacio-xl);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.resumen-titulo {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--espacio-md);
+}
+
+.lista-puntajes {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--espacio-sm);
+}
+
+.puntaje-item {
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-md);
+  padding: var(--espacio-sm) var(--espacio-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espacio-sm);
+}
+
+.puntaje-label {
+  font-size: 0.8rem;
+  color: var(--color-texto-suave);
+  font-weight: 500;
+}
+
+.puntaje-valor {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  font-family: var(--fuente-mono);
+  min-width: 2ch;
+  text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   8. RECOMENDACIONES (solo MANTENER_EN_PUESTO)
+   -------------------------------------------------------------------------- */
+
+.recomendaciones-container {
+  padding: var(--espacio-xl);
+  background: linear-gradient(135deg, var(--color-mantener-bg) 0%, #fff 100%);
+  border-top: 3px solid var(--color-mantener);
+}
+
+.recomendaciones-titulo {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-mantener);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--espacio-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-sm);
+}
+
+.lista-recomendaciones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-md);
+  padding-left: 0;
+  list-style: none;
+  counter-reset: recomendacion-contador;
+}
+
+.recomendacion-item {
+  display: flex;
+  gap: var(--espacio-md);
+  align-items: flex-start;
+  counter-increment: recomendacion-contador;
+}
+
+.recomendacion-item::before {
+  content: counter(recomendacion-contador);
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--color-mantener);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.recomendacion-cuerpo {
+  flex: 1;
+}
+
+.recomendacion-titulo {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  margin-bottom: var(--espacio-xs);
+}
+
+.recomendacion-desc {
+  font-size: 0.85rem;
+  color: var(--color-texto-suave);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   9. PIE DE PÁGINA
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+  background-color: var(--color-primario);
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: var(--espacio-md) var(--espacio-xl);
+  font-size: 0.775rem;
+  letter-spacing: 0.03em;
+}
+
+/* --------------------------------------------------------------------------
+   10. RESPONSIVIDAD
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 639px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--espacio-sm);
+  }
+
+  .header-brand {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: var(--espacio-sm);
+    width: 100%;
+  }
+
+  .card-header,
+  #evaluacion-form,
+  .decision-container,
+  .resumen-container,
+  .recomendaciones-container {
+    padding: var(--espacio-md);
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    justify-content: center;
+    width: 100%;
+  }
+}
