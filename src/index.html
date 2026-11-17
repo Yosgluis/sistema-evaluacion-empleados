@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evaluación 360° — Premium Consultores</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ====================================================================
+       ENCABEZADO CORPORATIVO
+  ===================================================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="brand-icon" aria-hidden="true">◈</span>
+        <span class="brand-name">Premium Consultores</span>
+      </div>
+      <div class="header-title">
+        <h1>Sistema de Evaluación de Desempeño 360°</h1>
+        <p class="header-subtitle">Herramienta de Apoyo a la Decisión Gerencial</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====================================================================
+       CONTENIDO PRINCIPAL
+  ===================================================================== -->
+  <main class="site-main">
+
+    <!-- ----------------------------------------------------------------
+         SECCIÓN: FORMULARIO DE EVALUACIÓN
+    ---------------------------------------------------------------- -->
+    <section class="card" id="seccion-formulario" aria-labelledby="form-titulo">
+      <header class="card-header">
+        <h2 id="form-titulo">Ingreso de Competencias</h2>
+        <p class="card-descripcion">
+          Evalúe al colaborador en las 5 competencias corporativas.
+          Asigne un puntaje entero del <strong>1</strong> (muy bajo) al <strong>10</strong> (excelente).
+        </p>
+      </header>
+
+      <form id="evaluacion-form" novalidate>
+        <fieldset class="campos-grid">
+          <legend class="sr-only">Competencias de evaluación</legend>
+
+          <!-- C1: Producción -->
+          <div class="campo-grupo" id="grupo-produccion">
+            <label class="campo-label" for="produccion">
+              <span class="campo-nombre">Producción</span>
+              <span class="campo-desc">Resultados financieros y cuota de mercado alcanzada.</span>
+            </label>
+            <div class="campo-input-wrap">
+              <input
+                class="campo-input"
+                type="number"
+                id="produccion"
+                name="produccion"
+                min="1"
+                max="10"
+                step="1"
+                placeholder="1–10"
+                aria-describedby="error-produccion"
+              />
+            </div>
+            <span class="campo-error" id="error-produccion" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- C2: Iniciativa -->
+          <div class="campo-grupo" id="grupo-iniciativa">
+            <label class="campo-label" for="iniciativa">
+              <span class="campo-nombre">Iniciativa</span>
+              <span class="campo-desc">Proactividad y dinamismo para impulsar negocios.</span>
+            </label>
+            <div class="campo-input-wrap">
+              <input
+                class="campo-input"
+                type="number"
+                id="iniciativa"
+                name="iniciativa"
+                min="1"
+                max="10"
+                step="1"
+                placeholder="1–10"
+                aria-describedby="error-iniciativa"
+              />
+            </div>
+            <span class="campo-error" id="error-iniciativa" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- C3: Comunicación -->
+          <div class="campo-grupo" id="grupo-comunicacion">
+            <label class="campo-label" for="comunicacion">
+              <span class="campo-nombre">Comunicación</span>
+              <span class="campo-desc">Claridad, paciencia y transmisión de conocimiento.</span>
+            </label>
+            <div class="campo-input-wrap">
+              <input
+                class="campo-input"
+                type="number"
+                id="comunicacion"
+                name="comunicacion"
+                min="1"
+                max="10"
+                step="1"
+                placeholder="1–10"
+                aria-describedby="error-comunicacion"
+              />
+            </div>
+            <span class="campo-error" id="error-comunicacion" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- C4: Relaciones Interpersonales -->
+          <div class="campo-grupo" id="grupo-relacionesInterpersonales">
+            <label class="campo-label" for="relacionesInterpersonales">
+              <span class="campo-nombre">Relaciones Interpersonales</span>
+              <span class="campo-desc">Trabajo en equipo, cooperación con colegas y subordinados.</span>
+            </label>
+            <div class="campo-input-wrap">
+              <input
+                class="campo-input"
+                type="number"
+                id="relacionesInterpersonales"
+                name="relacionesInterpersonales"
+                min="1"
+                max="10"
+                step="1"
+                placeholder="1–10"
+                aria-describedby="error-relacionesInterpersonales"
+              />
+            </div>
+            <span class="campo-error" id="error-relacionesInterpersonales" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- C5: Manejo del Cambio -->
+          <div class="campo-grupo" id="grupo-manejoDelCambio">
+            <label class="campo-label" for="manejoDelCambio">
+              <span class="campo-nombre">Manejo del Cambio</span>
+              <span class="campo-desc">Flexibilidad y respeto a normas y valores organizacionales.</span>
+            </label>
+            <div class="campo-input-wrap">
+              <input
+                class="campo-input"
+                type="number"
+                id="manejoDelCambio"
+                name="manejoDelCambio"
+                min="1"
+                max="10"
+                step="1"
+                placeholder="1–10"
+                aria-describedby="error-manejoDelCambio"
+              />
+            </div>
+            <span class="campo-error" id="error-manejoDelCambio" role="alert" aria-live="polite"></span>
+          </div>
+
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" id="btn-evaluar" class="btn-primary">
+            <span class="btn-icon" aria-hidden="true">▶</span>
+            Generar Recomendación
+          </button>
+          <button type="reset" id="btn-reiniciar" class="btn-secondary">
+            Reiniciar
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ----------------------------------------------------------------
+         SECCIÓN: RESULTADO (oculta hasta calcular)
+    ---------------------------------------------------------------- -->
+    <section
+      class="card hidden"
+      id="seccion-resultado"
+      aria-labelledby="resultado-titulo"
+      aria-live="polite"
+    >
+      <header class="card-header resultado-header">
+        <h2 id="resultado-titulo">Recomendación Gerencial</h2>
+      </header>
+
+      <!-- Badge de decisión -->
+      <div class="decision-container">
+        <div id="decision-badge" class="decision-badge" role="status">
+          <span id="decision-icono" class="decision-icono" aria-hidden="true"></span>
+          <span id="decision-texto" class="decision-texto"></span>
+        </div>
+        <p id="decision-justificacion" class="decision-justificacion"></p>
+      </div>
+
+      <!-- Resumen de puntajes -->
+      <div class="resumen-container">
+        <h3 class="resumen-titulo">Resumen de Puntajes Ingresados</h3>
+        <ul id="lista-puntajes" class="lista-puntajes"></ul>
+      </div>
+
+      <!-- Recomendaciones (solo para MANTENER_EN_PUESTO) -->
+      <div id="recomendaciones-container" class="recomendaciones-container hidden">
+        <h3 class="recomendaciones-titulo">
+          <span aria-hidden="true">📋</span>
+          Plan de Mejora — Recomendaciones Accionables
+        </h3>
+        <ol id="lista-recomendaciones" class="lista-recomendaciones"></ol>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       PIE DE PÁGINA
+  ===================================================================== -->
+  <footer class="site-footer">
+    <p>
+      &copy; <span id="anio-footer"></span> Premium Consultores &mdash;
+      Herramienta de uso interno. Confidencial.
+    </p>
+  </footer>
+
+  <!-- Scripts: agentLogic primero, luego app -->
+  <script src="js/agentLogic.js" defer></script>
+  <script src="js/app.js" defer></script>
+
+</body>
+</html>
