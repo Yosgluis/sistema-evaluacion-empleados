@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evaluación 360° — Premium Consultores</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ====================================================================
+       ENCABEZADO CORPORATIVO
+  ===================================================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="brand-icon" aria-hidden="true">◈</span>
+        <span class="brand-name">Premium Consultores</span>
+      </div>
+      <div class="header-title">
+        <h1>Sistema de Evaluación de Desempeño 360°</h1>
+        <p class="header-subtitle">Herramienta de Apoyo a la Decisión Gerencial — Arnoldo Hernández</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====================================================================
+       CONTENIDO PRINCIPAL
+  ===================================================================== -->
+  <main class="site-main">
+
+    <!-- ----------------------------------------------------------------
+         SECCIÓN: FORMULARIO DE EVALUACIÓN (DISEÑO CLÁSICO LIMPIO)
+    ---------------------------------------------------------------- -->
+    <section class="card" id="seccion-formulario" aria-labelledby="form-titulo">
+      <header class="card-header">
+        <div class="card-header-titular">
+          <h2 id="form-titulo">Ingreso de Competencias (Escala 1 a 10)</h2>
+          <p class="card-descripcion">
+            Evalúe al colaborador en las 5 competencias corporativas de Premium Consultores.
+            Asigne un puntaje entero del <strong>1</strong> (muy bajo) al <strong>10</strong> (excelente).
+          </p>
+        </div>
+
+        <!-- Barra sutil y compacta de carga rápida (estilo clásico) -->
+        <div class="ejemplos-rapidos-bar" role="group" aria-label="Cargar caso de ejemplo">
+          <span class="ejemplos-label">Cargar caso de referencia:</span>
+          <button type="button" class="btn-ejemplo btn-ejemplo-juan" id="btn-caso-juan" data-scores='{"produccion":"10","iniciativa":"9","comunicacion":"3","relacionesInterpersonales":"3","manejoDelCambio":"4"}'>
+            ★ Caso Juan Carlos Sánchez
+          </button>
+          <button type="button" class="btn-ejemplo" data-scores='{"produccion":"9","iniciativa":"9","comunicacion":"8","relacionesInterpersonales":"8","manejoDelCambio":"8"}'>
+            Ascenso (Líder Integral)
+          </button>
+          <button type="button" class="btn-ejemplo" data-scores='{"produccion":"9","iniciativa":"8","comunicacion":"4","relacionesInterpersonales":"7","manejoDelCambio":"8"}'>
+            Técnico Brillante
+          </button>
+          <button type="button" class="btn-ejemplo" data-scores='{"produccion":"8","iniciativa":"7","comunicacion":"8","relacionesInterpersonales":"8","manejoDelCambio":"3"}'>
+            Tradicionalista
+          </button>
+          <button type="button" class="btn-ejemplo" data-scores='{"produccion":"3","iniciativa":"4","comunicacion":"8","relacionesInterpersonales":"9","manejoDelCambio":"7"}'>
+            Bajo Rendimiento
+          </button>
+        </div>
+      </header>
+
+      <form id="evaluacion-form" novalidate>
+        <fieldset class="campos-grid">
+          <legend class="sr-only">Competencias de evaluación</legend>
+
+          <!-- C1: Producción -->
+          <div class="campo-grupo" id="grupo-produccion">
+            <label class="campo-label" for="produccion">
+              <span class="campo-nombre">Producción</span>
+              <span class="campo-desc">Resultados financieros y cuota de mercado alcanzada.</span>
+            </label>
+            <div class="campo-input-wrap">
+              <input
+                class="campo-input"
+                type="number"
+                id="produccion"
+                name="produccion"
+                min="1"
+                max="10"
+                step="1"
+                placeholder="1–10"
+                aria-describedby="error-produccion"
+              />
+            </div>
+            <span class="campo-error" id="error-produccion" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- C2: Iniciativa -->
+          <div class="campo-grupo" id="grupo-iniciativa">
+            <label class="campo-label" for="iniciativa">
+              <span class="campo-nombre">Iniciativa</span>
+              <span class="campo-desc">Proactividad y dinamismo para impulsar negocios.</span>
+            </label>
+            <div class="campo-input-wrap">
+              <input
+                class="campo-input"
+                type="number"
+                id="iniciativa"
+                name="iniciativa"
+                min="1"
+                max="10"
+                step="1"
+                placeholder="1–10"
+                aria-describedby="error-iniciativa"
+              />
+            </div>
+            <span class="campo-error" id="error-iniciativa" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- C3: Comunicación -->
+          <div class="campo-grupo" id="grupo-comunicacion">
+            <label class="campo-label" for="comunicacion">
+              <span class="campo-nombre">Comunicación</span>
+              <span class="campo-desc">Claridad, paciencia y transmisión de conocimiento.</span>
+            </label>
+            <div class="campo-input-wrap">
+              <input
+                class="campo-input"
+                type="number"
+                id="comunicacion"
+                name="comunicacion"
+                min="1"
+                max="10"
+                step="1"
+                placeholder="1–10"
+                aria-describedby="error-comunicacion"
+              />
+            </div>
+            <span class="campo-error" id="error-comunicacion" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- C4: Relaciones Interpersonales -->
+          <div class="campo-grupo" id="grupo-relacionesInterpersonales">
+            <label class="campo-label" for="relacionesInterpersonales">
+              <span class="campo-nombre">Relaciones Interpersonales</span>
+              <span class="campo-desc">Trabajo en equipo, cooperación con colegas y subordinados.</span>
+            </label>
+            <div class="campo-input-wrap">
+              <input
+                class="campo-input"
+                type="number"
+                id="relacionesInterpersonales"
+                name="relacionesInterpersonales"
+                min="1"
+                max="10"
+                step="1"
+                placeholder="1–10"
+                aria-describedby="error-relacionesInterpersonales"
+              />
+            </div>
+            <span class="campo-error" id="error-relacionesInterpersonales" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- C5: Manejo del Cambio -->
+          <div class="campo-grupo" id="grupo-manejoDelCambio">
+            <label class="campo-label" for="manejoDelCambio">
+              <span class="campo-nombre">Manejo del Cambio</span>
+              <span class="campo-desc">Flexibilidad y respeto a normas y valores organizacionales.</span>
+            </label>
+            <div class="campo-input-wrap">
+              <input
+                class="campo-input"
+                type="number"
+                id="manejoDelCambio"
+                name="manejoDelCambio"
+                min="1"
+                max="10"
+                step="1"
+                placeholder="1–10"
+                aria-describedby="error-manejoDelCambio"
+              />
+            </div>
+            <span class="campo-error" id="error-manejoDelCambio" role="alert" aria-live="polite"></span>
+          </div>
+
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" id="btn-evaluar" class="btn-primary">
+            <span class="btn-icon" aria-hidden="true">▶</span>
+            Generar Recomendación
+          </button>
+          <button type="reset" id="btn-reiniciar" class="btn-secondary">
+            Reiniciar
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ----------------------------------------------------------------
+         SECCIÓN: RESULTADO (oculta hasta calcular)
+    ---------------------------------------------------------------- -->
+    <section
+      class="card hidden"
+      id="seccion-resultado"
+      aria-labelledby="resultado-titulo"
+      aria-live="polite"
+    >
+      <header class="card-header resultado-header">
+        <h2 id="resultado-titulo">Recomendación Gerencial</h2>
+      </header>
+
+      <!-- Badge de decisión principal -->
+      <div class="decision-container">
+        <div id="decision-badge" class="decision-badge" role="status">
+          <span id="decision-icono" class="decision-icono" aria-hidden="true"></span>
+          <span id="decision-texto" class="decision-texto"></span>
+        </div>
+        <p id="decision-justificacion" class="decision-justificacion"></p>
+      </div>
+
+      <!-- Ruta y Sub-perfil detectado en el esquema según los valores -->
+      <div id="perfil-ruta-container" class="perfil-ruta-container">
+        <span class="perfil-ruta-lead">Ruta y Perfil Activado según los valores ingresados:</span>
+        <div id="perfil-ruta-badge" class="perfil-ruta-badge">
+          <span id="perfil-ruta-icono" aria-hidden="true">★</span>
+          <span id="perfil-ruta-nombre"></span>
+        </div>
+        <p id="perfil-ruta-subtitulo" class="perfil-ruta-subtitulo"></p>
+      </div>
+
+      <!-- Resumen de puntajes -->
+      <div class="resumen-container">
+        <h3 class="resumen-titulo">Resumen de Puntajes Ingresados</h3>
+        <ul id="lista-puntajes" class="lista-puntajes"></ul>
+      </div>
+
+      <!-- Recomendaciones orientadas a la mejora (dinámicas según valores ingresados) -->
+      <div id="recomendaciones-container" class="recomendaciones-container hidden">
+        <h3 class="recomendaciones-titulo">
+          <span aria-hidden="true">📋</span>
+          Plan de Mejora Orientado al Empleado (Recomendaciones Específicas)
+        </h3>
+        <ol id="lista-recomendaciones" class="lista-recomendaciones"></ol>
+      </div>
+
+    </section>
+
+    <!-- ----------------------------------------------------------------
+         SECCIÓN: ESQUEMA GRÁFICO DE DECISIÓN (COLAPSABLE / ACCESIBLE)
+    ---------------------------------------------------------------- -->
+    <section class="card seccion-esquema" id="seccion-esquema" aria-labelledby="esquema-titulo">
+      <header class="card-header esquema-header-flex">
+        <div>
+          <h2 id="esquema-titulo">Esquema Gráfico de Rutas de Decisión 360°</h2>
+          <p class="card-descripcion">
+            Visualización metodológica de todas las bifurcaciones y la ruta destacada de Juan Carlos Sánchez.
+          </p>
+        </div>
+        <button type="button" id="btn-toggle-esquema" class="btn-secondary btn-sm" aria-expanded="true">
+          Contraer Esquema
+        </button>
+      </header>
+
+      <div id="esquema-cuerpo" class="esquema-cuerpo">
+        <div class="esquema-img-wrapper">
+          <img
+            src="assets/img/esquema_rutas_decisiones_completo.svg"
+            alt="Esquema gráfico de rutas de decisión 360 con el caso Juan Carlos Sánchez destacado"
+            class="esquema-imagen-render"
+          />
+        </div>
+        <div class="esquema-pie-acciones">
+          <a href="assets/img/esquema_rutas_decisiones_completo.svg" target="_blank" rel="noopener noreferrer" class="link-accion">
+            🔍 Abrir esquema en tamaño completo (SVG)
+          </a>
+          <a href="assets/img/esquema_rutas_decisiones_completo.png" download class="link-accion">
+            💾 Descargar imagen PNG
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       PIE DE PÁGINA
+  ===================================================================== -->
+  <footer class="site-footer">
+    <p>
+      &copy; <span id="anio-footer"></span> Premium Consultores &mdash;
+      Herramienta de uso interno gerencial. Caso: Juan Carlos Sánchez.
+    </p>
+  </footer>
+
+  <!-- Scripts: agentLogic primero, luego app -->
+  <script src="js/agentLogic.js" defer></script>
+  <script src="js/app.js" defer></script>
+
+</body>
+</html>

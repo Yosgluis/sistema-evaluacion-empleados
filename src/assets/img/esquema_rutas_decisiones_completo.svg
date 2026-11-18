@@ -1,0 +1,379 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1150" width="100%" height="100%" style="background:#0b1120; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="50%" stop-color="#1a2744"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="juanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d1c03"/>
+      <stop offset="100%" stop-color="#1e1405"/>
+    </linearGradient>
+    <linearGradient id="goldBadgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="glowGold" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#f59e0b" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Markers -->
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+    <marker id="arr-gold" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- 1. HEADER PRINCIPAL -->
+  <g transform="translate(40, 20)">
+    <rect width="1360" height="85" rx="14" fill="url(#headerGrad)" stroke="#c8a84b" stroke-width="2" filter="url(#shadow)"/>
+    <text x="680" y="38" font-size="22" font-weight="800" fill="#f8fafc" text-anchor="middle" letter-spacing="0.5">
+      MAPA INTEGRAL DE RUTAS DE DECISIÓN Y CASOS ORGANIZACIONALES (360°)
+    </text>
+    <text x="680" y="66" font-size="14" fill="#94a3b8" text-anchor="middle">
+      Sistema de Evaluación Premium Consultores | Clasificación de Todos los Perfiles y Destacado del Caso Juan Carlos Sánchez
+    </text>
+  </g>
+
+  <!-- 2. COMPETENCIAS DE ENTRADA -->
+  <g transform="translate(40, 120)">
+    <rect width="1360" height="82" rx="12" fill="#111827" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="25" y="28" font-size="12" font-weight="700" fill="#c8a84b" text-transform="uppercase" letter-spacing="1">
+      1. Parámetros de Entrada (5 Competencias evaluadas en escala del 1 al 10)
+    </text>
+    
+    <g transform="translate(25, 38)">
+      <!-- Comp 1 -->
+      <rect x="0" y="0" width="245" height="34" rx="6" fill="#1e293b" stroke="#475569"/>
+      <text x="122" y="21" font-size="12" font-weight="600" fill="#e2e8f0" text-anchor="middle">📊 Producción (Técnica)</text>
+
+      <!-- Comp 2 -->
+      <rect x="265" y="0" width="245" height="34" rx="6" fill="#1e293b" stroke="#475569"/>
+      <text x="387" y="21" font-size="12" font-weight="600" fill="#e2e8f0" text-anchor="middle">💡 Iniciativa / Proactividad</text>
+
+      <!-- Comp 3 -->
+      <rect x="530" y="0" width="245" height="34" rx="6" fill="#1e293b" stroke="#475569"/>
+      <text x="652" y="21" font-size="12" font-weight="600" fill="#e2e8f0" text-anchor="middle">🗣️ Comunicación Asertiva</text>
+
+      <!-- Comp 4 -->
+      <rect x="795" y="0" width="245" height="34" rx="6" fill="#1e293b" stroke="#475569"/>
+      <text x="917" y="21" font-size="12" font-weight="600" fill="#e2e8f0" text-anchor="middle">🤝 Relaciones Interpersonales</text>
+
+      <!-- Comp 5 -->
+      <rect x="1060" y="0" width="245" height="34" rx="6" fill="#1e293b" stroke="#475569"/>
+      <text x="1182" y="21" font-size="12" font-weight="600" fill="#e2e8f0" text-anchor="middle">🔄 Manejo del Cambio</text>
+    </g>
+  </g>
+
+  <!-- LINEA CONECTORA CENTRAL -->
+  <line x1="720" y1="202" x2="720" y2="232" stroke="#64748b" stroke-width="2" marker-end="url(#arr-gray)"/>
+
+  <!-- NODO LOGICO CENTRAL -->
+  <g transform="translate(500, 232)">
+    <rect width="440" height="42" rx="21" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
+    <text x="220" y="26" font-size="14" font-weight="700" fill="#7dd3fc" text-anchor="middle">
+      ⚡ Matriz de Decisión: Evaluación Jerárquica de Umbrales
+    </text>
+  </g>
+
+  <!-- LÍNEAS DE RUTA -->
+  <!-- Ruta Despedir -->
+  <path d="M 520 274 L 520 300 L 205 300 L 205 330" fill="none" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arr-red)"/>
+  <!-- Ruta Mantener (RUTA PRINCIPAL JUAN CARLOS SÁNCHEZ) -->
+  <path d="M 720 274 L 720 330" fill="none" stroke="#f59e0b" stroke-width="4" filter="url(#glowGold)" marker-end="url(#arr-gold)"/>
+  <!-- Ruta Ascender -->
+  <path d="M 920 274 L 920 300 L 1235 300 L 1235 330" fill="none" stroke="#10b981" stroke-width="2.5" marker-end="url(#arr-green)"/>
+
+  <!-- ETIQUETAS DE UMBRAL EN LAS RUTAS -->
+  <rect x="75" y="288" width="260" height="24" rx="5" fill="#181825" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="205" y="304" font-size="11" font-weight="700" fill="#fca5a5" text-anchor="middle">
+    Producción &lt; 5  Ó  (Rel ≤ 2 Y Prod &lt; 7)
+  </text>
+
+  <rect x="560" y="288" width="320" height="24" rx="5" fill="#1e1805" stroke="#f59e0b" stroke-width="2"/>
+  <text x="720" y="304" font-size="11.5" font-weight="800" fill="#fde68a" text-anchor="middle">
+    Producción ≥ 7  Y  (Alguna Soft Skill &lt; 7)
+  </text>
+
+  <rect x="1105" y="288" width="260" height="24" rx="5" fill="#181825" stroke="#10b981" stroke-width="1.5"/>
+  <text x="1235" y="304" font-size="11" font-weight="700" fill="#a7f3d0" text-anchor="middle">
+    Prod ≥ 8, Inic ≥ 8  Y  Soft Skills ≥ 7
+  </text>
+
+  <!-- ================================================================= -->
+  <!-- COLUMNA 1: DESPEDIR (IZQUIERDA) -->
+  <!-- ================================================================= -->
+  <g transform="translate(40, 335)">
+    <rect width="330" height="465" rx="12" fill="#141422" stroke="#ef4444" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="330" height="38" rx="12" fill="#7f1d1d"/>
+    <text x="165" y="25" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">❌ RAMA: DESPEDIR</text>
+    <text x="165" y="56" font-size="11.5" font-weight="600" fill="#fca5a5" text-anchor="middle">Inviabilidad Técnica o Clima Incompatible</text>
+
+    <!-- Sub-caso 1: Buen amigo incompetente -->
+    <g transform="translate(15, 75)">
+      <rect width="300" height="175" rx="8" fill="#1e1e2f" stroke="#475569"/>
+      <rect x="0" y="0" width="300" height="26" rx="8" fill="#334155"/>
+      <text x="150" y="18" font-size="11.5" font-weight="700" fill="#f8fafc" text-anchor="middle">Caso: El Buen Compañero Incompetente</text>
+      <text x="12" y="45" font-size="11" fill="#cbd5e1">
+        <tspan x="12" dy="0" font-weight="700" fill="#fca5a5">Scores:</tspan> Prod: 3 | Inic: 4 | Rel: 9 | Com: 8
+        <tspan x="12" dy="18" font-weight="700" fill="#fca5a5">Perfil:</tspan> Querido por todos, clima excelente,
+        <tspan x="12" dy="14">pero nula capacidad financiera y metas</tspan>
+        <tspan x="12" dy="14">comerciales no alcanzadas.</tspan>
+        <tspan x="12" dy="18" font-weight="700" fill="#ef4444">Dictamen:</tspan> Inviable financieramente.
+        <tspan x="12" dy="14">El buen trato no subsidia pérdidas.</tspan>
+        <tspan x="12" dy="18" font-style="italic" fill="#94a3b8">Aplica regla directa: Prod &lt; 5</tspan>
+      </text>
+    </g>
+
+    <!-- Sub-caso 2: Conflicto destructivo -->
+    <g transform="translate(15, 265)">
+      <rect width="300" height="185" rx="8" fill="#1e1e2f" stroke="#475569"/>
+      <rect x="0" y="0" width="300" height="26" rx="8" fill="#334155"/>
+      <text x="150" y="18" font-size="11.5" font-weight="700" fill="#f8fafc" text-anchor="middle">Caso: Conflicto Destructivo Medio</text>
+      <text x="12" y="45" font-size="11" fill="#cbd5e1">
+        <tspan x="12" dy="0" font-weight="700" fill="#fca5a5">Scores:</tspan> Prod: 6 | Inic: 6 | Rel: 2 | Com: 3
+        <tspan x="12" dy="18" font-weight="700" fill="#fca5a5">Perfil:</tspan> Desempeño promedio o regular, pero
+        <tspan x="12" dy="14">genera quejas constantes, fricción severa</tspan>
+        <tspan x="12" dy="14">y desmotivación en el equipo.</tspan>
+        <tspan x="12" dy="18" font-weight="700" fill="#ef4444">Dictamen:</tspan> Daño al equipo inasumible.
+        <tspan x="12" dy="14">Sus números no compensan la fuga de talento.</tspan>
+        <tspan x="12" dy="18" font-style="italic" fill="#94a3b8">Aplica: Rel ≤ 2 Y Prod &lt; 7</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- COLUMNA 2: MANTENER EN EL PUESTO (CENTRAL Y PROMINENTE) -->
+  <!-- ================================================================= -->
+  <g transform="translate(390, 335)">
+    <rect width="660" height="465" rx="12" fill="#121a2f" stroke="#f59e0b" stroke-width="2.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="660" height="38" rx="12" fill="#b45309"/>
+    <text x="330" y="25" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">
+      ⚠️ RAMA: MANTENER EN EL PUESTO (Consultor Senior + Plan de Mejora)
+    </text>
+
+    <!-- ⭐⭐⭐ CARD DESTACADA: EL CASO DE JUAN CARLOS SÁNCHEZ ⭐⭐⭐ -->
+    <g transform="translate(15, 48)">
+      <!-- Glow & border destacado -->
+      <rect width="630" height="185" rx="10" fill="url(#juanGrad)" stroke="#f59e0b" stroke-width="3" filter="url(#glowGold)"/>
+      
+      <!-- Ribbon / Tag de Juan Carlos -->
+      <rect x="15" y="-12" width="310" height="26" rx="6" fill="url(#goldBadgeGrad)"/>
+      <text x="170" y="5" font-size="12" font-weight="900" fill="#000000" text-anchor="middle" letter-spacing="0.5">
+        ★ ESTE ES EL CASO DE JUAN CARLOS SÁNCHEZ
+      </text>
+
+      <text x="20" y="32" font-size="14" font-weight="800" fill="#fbbf24">
+        Perfil: "El Tiburón Comercial" (Resultados Excepcionales + Quiebre Cultural)
+      </text>
+
+      <!-- Evaluacion numérica de Juan -->
+      <g transform="translate(20, 42)">
+        <rect width="590" height="26" rx="5" fill="#181308" stroke="#d97706" stroke-width="1"/>
+        <text x="295" y="17" font-size="11.5" font-weight="700" fill="#fef08a" text-anchor="middle">
+          Puntuación: Producción: 10/10 | Iniciativa: 9/10 | Comunicación: 3/10 | Relaciones: 3/10 | Cambio: 4/10
+        </text>
+      </g>
+
+      <text x="20" y="90" font-size="11.5" fill="#f1f5f9">
+        <tspan x="20" dy="0" font-weight="700" fill="#fde68a">Diagnóstico del Caso:</tspan> Pasó la unidad de Finanzas del 10.° al 4.° lugar (cuota de mercado del 3% al 17%).
+        <tspan x="20" dy="16">Sin embargo, muestra estilo individualista, agresividad con colaboradores y decisiones inconsultas.</tspan>
+        <tspan x="20" dy="18" font-weight="700" fill="#fde68a">Resolución de Arnoldo Hernández:</tspan>
+        <tspan font-weight="800" fill="#ffffff"> NO ASCENDER AHORA</tspan> (violaría valores éticos de la firma) ni
+        <tspan font-weight="800" fill="#ffffff">DESPEDIR</tspan> (destruiría
+        <tspan x="20" dy="16">el negocio). Se le ratifica como Consultor Senior supeditado a los </tspan>
+        <tspan font-weight="700" fill="#fbbf24">4 Pilares de Mejora del Plan 360°</tspan>.
+      </text>
+    </g>
+
+    <!-- OTROS 4 SUB-CASOS QUE TAMBIÉN ARROJAN MANTENER -->
+    <text x="330" y="252" font-size="11.5" font-weight="700" fill="#94a3b8" text-anchor="middle" text-transform="uppercase" letter-spacing="0.5">
+      Otros Perfiles Organizacionales que Conducen a "Mantener" (con mejoras específicas)
+    </text>
+
+    <!-- Grid 2x2 para otros 4 casos -->
+    <g transform="translate(15, 262)">
+      <!-- Caso A -->
+      <g transform="translate(0, 0)">
+        <rect width="305" height="90" rx="6" fill="#1e293b" stroke="#475569"/>
+        <text x="10" y="18" font-size="11" font-weight="700" fill="#93c5fd">Caso 1: El Técnico Brillante</text>
+        <text x="10" y="34" font-size="10.5" fill="#cbd5e1">
+          <tspan x="10" dy="0">• Scores: Prod: 9 | Inic: 8 | <tspan font-weight="700" fill="#f87171">Com: 4</tspan> | Rel: 7</tspan>
+          <tspan x="10" dy="15">• Falla en transmitir ideas y redacción.</tspan>
+          <tspan x="10" dy="15">• <tspan font-weight="700" fill="#e2e8f0">Mejora:</tspan> Oratoria y presentaciones ejecutivas.</tspan>
+        </text>
+      </g>
+
+      <!-- Caso B -->
+      <g transform="translate(325, 0)">
+        <rect width="305" height="90" rx="6" fill="#1e293b" stroke="#475569"/>
+        <text x="10" y="18" font-size="11" font-weight="700" fill="#93c5fd">Caso 2: El Tradicionalista Rígido</text>
+        <text x="10" y="34" font-size="10.5" fill="#cbd5e1">
+          <tspan x="10" dy="0">• Scores: Prod: 8 | Inic: 7 | Rel: 8 | <tspan font-weight="700" fill="#f87171">MC: 3</tspan></tspan>
+          <tspan x="10" dy="15">• Resistencia a metodologías de renovación.</tspan>
+          <tspan x="10" dy="15">• <tspan font-weight="700" fill="#e2e8f0">Mejora:</tspan> Capacitación en innovación financiera.</tspan>
+        </text>
+      </g>
+
+      <!-- Caso C -->
+      <g transform="translate(0, 98)">
+        <rect width="305" height="92" rx="6" fill="#1e293b" stroke="#475569"/>
+        <text x="10" y="18" font-size="11" font-weight="700" fill="#93c5fd">Caso 3: El Colega Ejemplar</text>
+        <text x="10" y="34" font-size="10.5" fill="#cbd5e1">
+          <tspan x="10" dy="0">• Scores: <tspan font-weight="700" fill="#fcd34d">Prod: 7</tspan> | Inic: 6 | Rel: 9 | Com: 9</tspan>
+          <tspan x="10" dy="15">• Clima excelente, pero volumen justo.</tspan>
+          <tspan x="10" dy="15">• <tspan font-weight="700" fill="#e2e8f0">Mejora:</tspan> Modelado avanzado y cierre comercial.</tspan>
+        </text>
+      </g>
+
+      <!-- Caso D -->
+      <g transform="translate(325, 98)">
+        <rect width="305" height="92" rx="6" fill="#1e293b" stroke="#475569"/>
+        <text x="10" y="18" font-size="11" font-weight="700" fill="#93c5fd">Caso 4: El Operador Estable</text>
+        <text x="10" y="34" font-size="10.5" fill="#cbd5e1">
+          <tspan x="10" dy="0">• Scores: Prod: 7 | <tspan font-weight="700" fill="#f87171">Inic: 5</tspan> | Rel: 7 | Com: 7</tspan>
+          <tspan x="10" dy="15">• Cumple sin errores pero sin proactividad.</tspan>
+          <tspan x="10" dy="15">• <tspan font-weight="700" fill="#e2e8f0">Mejora:</tspan> Pensamiento estratégico y autonomía.</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- COLUMNA 3: ASCENDER (DERECHA) -->
+  <!-- ================================================================= -->
+  <g transform="translate(1070, 335)">
+    <rect width="330" height="465" rx="12" fill="#10231c" stroke="#10b981" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="330" height="38" rx="12" fill="#065f46"/>
+    <text x="165" y="25" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">⭐ RAMA: ASCENDER</text>
+    <text x="165" y="56" font-size="11.5" font-weight="600" fill="#a7f3d0" text-anchor="middle">A Director General de Finanzas / Socio</text>
+
+    <!-- Sub-caso 1: Líder Integral -->
+    <g transform="translate(15, 75)">
+      <rect width="300" height="175" rx="8" fill="#173127" stroke="#047857"/>
+      <rect x="0" y="0" width="300" height="26" rx="8" fill="#047857"/>
+      <text x="150" y="18" font-size="11.5" font-weight="700" fill="#ffffff" text-anchor="middle">Caso: El Socio / Líder Integral</text>
+      <text x="12" y="45" font-size="11" fill="#cbd5e1">
+        <tspan x="12" dy="0" font-weight="700" fill="#a7f3d0">Scores:</tspan> Prod: 10 | Inic: 10 | Rel: 9 | Com: 9
+        <tspan x="12" dy="18" font-weight="700" fill="#a7f3d0">Perfil:</tspan> Excelencia técnica, credibilidad plena
+        <tspan x="12" dy="14">con clientes y ejerce liderazgo con el ejemplo.</tspan>
+        <tspan x="12" dy="18" font-weight="700" fill="#34d399">Dictamen:</tspan> Promoción inmediata a la
+        <tspan x="12" dy="14">máxima jerarquía de Premium Consultores.</tspan>
+        <tspan x="12" dy="18" font-style="italic" fill="#6ee7b7">Cumple holgadamente todos los criterios</tspan>
+      </text>
+    </g>
+
+    <!-- Sub-caso 2: Ascenso al umbral -->
+    <g transform="translate(15, 265)">
+      <rect width="300" height="185" rx="8" fill="#173127" stroke="#047857"/>
+      <rect x="0" y="0" width="300" height="26" rx="8" fill="#047857"/>
+      <text x="150" y="18" font-size="11.5" font-weight="700" fill="#ffffff" text-anchor="middle">Caso: Ascenso al Umbral Exigido</text>
+      <text x="12" y="45" font-size="11" fill="#cbd5e1">
+        <tspan x="12" dy="0" font-weight="700" fill="#a7f3d0">Scores:</tspan> Prod: 8 | Inic: 8 | Rel: 7 | Com: 7 | MC: 7
+        <tspan x="12" dy="18" font-weight="700" fill="#a7f3d0">Perfil:</tspan> Cumple exactamente con la barra
+        <tspan x="12" dy="14">mínima de excelencia técnica y humana.</tspan>
+        <tspan x="12" dy="18" font-weight="700" fill="#34d399">Dictamen:</tspan> Ascenso aprobado con plan de
+        <tspan x="12" dy="14">inducción y soporte directivo inicial.</tspan>
+        <tspan x="12" dy="18" font-style="italic" fill="#6ee7b7">Alcanza umbral estricto 8/8/7/7/7</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- LINEA FLECHA DESDE CASO JUAN CARLOS HACIA PLAN DE ACCION -->
+  <path d="M 720 568 L 720 812" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arr-gold)"/>
+
+  <!-- ================================================================= -->
+  <!-- 3. PLAN DE ACCIÓN ASOCIADO ESPECÍFICAMENTE A LA RUTA DE JUAN CARLOS -->
+  <!-- ================================================================= -->
+  <g transform="translate(40, 818)">
+    <rect width="1360" height="305" rx="14" fill="#111827" stroke="#c8a84b" stroke-width="2.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="1360" height="38" rx="14" fill="#1e293b"/>
+    <text x="680" y="25" font-size="14" font-weight="800" fill="#fde68a" text-anchor="middle" letter-spacing="0.5">
+      🎯 RUTA DE MEJORA OBLIGATORIA ASIGNADA A JUAN CARLOS SÁNCHEZ (SEGUIMIENTO GERENCIAL A 6 MESES)
+    </text>
+
+    <!-- 4 Pilares -->
+    <g transform="translate(20, 50)">
+      <!-- Pilar 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="310" height="235" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+        <rect width="310" height="30" rx="8" fill="#1e3a8a"/>
+        <text x="155" y="20" font-size="12" font-weight="700" fill="#93c5fd" text-anchor="middle">1. Coaching &amp; Asertividad</text>
+        <text x="15" y="50" font-size="11" fill="#cbd5e1">
+          <tspan x="15" dy="0" font-weight="700" fill="#ffffff">Objetivo:</tspan> Erradicar actitudes agresivas
+          <tspan x="15" dy="14">e impacientes con colegas y colaboradores.</tspan>
+          <tspan x="15" dy="18" font-weight="700" fill="#ffffff">Acciones Clave:</tspan>
+          <tspan x="15" dy="14">• Sesiones de inteligencia emocional.</tspan>
+          <tspan x="15" dy="14">• Técnicas de escucha activa y diálogo.</tspan>
+          <tspan x="15" dy="14">• Gestión de la frustración operativa.</tspan>
+          <tspan x="15" dy="18" font-weight="700" fill="#c8a84b">Meta:</tspan> Comunicación ≥ 7 en 360°.
+        </text>
+      </g>
+
+      <!-- Pilar 2 -->
+      <g transform="translate(335, 0)">
+        <rect width="310" height="235" rx="8" fill="#1e293b" stroke="#0ea5e9" stroke-width="1.5"/>
+        <rect width="310" height="30" rx="8" fill="#0369a1"/>
+        <text x="155" y="20" font-size="12" font-weight="700" fill="#7dd3fc" text-anchor="middle">2. Gobernanza y Procedimientos</text>
+        <text x="15" y="50" font-size="11" fill="#cbd5e1">
+          <tspan x="15" dy="0" font-weight="700" fill="#ffffff">Objetivo:</tspan> Eliminar decisiones inconsultas
+          <tspan x="15" dy="14">y el estilo individualista ("por la libre").</tspan>
+          <tspan x="15" dy="18" font-weight="700" fill="#ffffff">Acciones Clave:</tspan>
+          <tspan x="15" dy="14">• Comités técnicos semanales obligatorios.</tspan>
+          <tspan x="15" dy="14">• Validación colegiada de nuevas estrategias.</tspan>
+          <tspan x="15" dy="14">• Apego a manuales de la consultora.</tspan>
+          <tspan x="15" dy="18" font-weight="700" fill="#c8a84b">Meta:</tspan> Respeto al marco metodológico.
+        </text>
+      </g>
+
+      <!-- Pilar 3 -->
+      <g transform="translate(670, 0)">
+        <rect width="310" height="235" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+        <rect width="310" height="30" rx="8" fill="#b45309"/>
+        <text x="155" y="20" font-size="12" font-weight="700" fill="#fde68a" text-anchor="middle">3. Prueba 6 Meses (50/50)</text>
+        <text x="15" y="50" font-size="11" fill="#cbd5e1">
+          <tspan x="15" dy="0" font-weight="700" fill="#ffffff">Objetivo:</tspan> Desarticular la creencia de que
+          <tspan x="15" dy="14">"solo las ventas importan para ascender".</tspan>
+          <tspan x="15" dy="18" font-weight="700" fill="#ffffff">Ponderación Formal:</tspan>
+          <tspan x="15" dy="14">• <tspan font-weight="700" fill="#fde68a">50%</tspan> Resultados financieros de Finanzas.</tspan>
+          <tspan x="15" dy="14">• <tspan font-weight="700" fill="#fde68a">50%</tspan> Clima laboral y evaluación de pares.</tspan>
+          <tspan x="15" dy="18" font-weight="700" fill="#c8a84b">Meta:</tspan> Ascenso supeditado a clima armónico.
+        </text>
+      </g>
+
+      <!-- Pilar 4 -->
+      <g transform="translate(1005, 0)">
+        <rect width="310" height="235" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+        <rect width="310" height="30" rx="8" fill="#047857"/>
+        <text x="155" y="20" font-size="12" font-weight="700" fill="#a7f3d0" text-anchor="middle">4. Mentoría con Arnoldo H.</text>
+        <text x="15" y="50" font-size="11" fill="#cbd5e1">
+          <tspan x="15" dy="0" font-weight="700" fill="#ffffff">Objetivo:</tspan> Alineación directa con los
+          <tspan x="15" dy="14">valores de dignidad y respeto humano.</tspan>
+          <tspan x="15" dy="18" font-weight="700" fill="#ffffff">Acciones Clave:</tspan>
+          <tspan x="15" dy="14">• Reuniones quincenales 1 a 1 de feedback.</tspan>
+          <tspan x="15" dy="14">• Modelado de liderazgo por el ejemplo.</tspan>
+          <tspan x="15" dy="14">• Canalización positiva de su empuje comercial.</tspan>
+          <tspan x="15" dy="18" font-weight="700" fill="#c8a84b">Meta:</tspan> Adopción de la cultura Premium.
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
