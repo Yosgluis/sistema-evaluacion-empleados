@@ -1,24 +1,19 @@
 ## Estado Actual
-- **Fase:** Implementación completada (spec 001-evaluador-desempeno).
-- **Código fuente (`src/`):** Implementado y funcional.
+- **Fase:** Ajuste de diseño clásico y recomendaciones dinámicas completado.
+- **Código fuente (`src/`):** Estilo corporativo clásico restaurado con motor de recomendaciones adaptativo.
 
 ## Decisiones Tomadas
-- Arquitectura modular sin dependencias externas (HTML5 + CSS3 + JS ES6+ Vanilla).
-- Las reglas de evaluación quedan encapsuladas en `.agents/skills/rrhh-evaluator/SKILLS.md`.
-- Scripts cargados con `defer` en orden: `agentLogic.js` → `app.js` (scope global, sin módulos ES).
-- `agentLogic.js` verificado: cero referencias al DOM (solo funciones puras).
-- Paleta corporativa: azul marino `#1a2744` + dorado `#c8a84b`.
+- Se restauró el layout clásico limpio del formulario corporativo.
+- En `src/js/agentLogic.js`, las recomendaciones para `MANTENER_EN_PUESTO` ahora se adaptan de forma 100% dinámica a las competencias con déficit (< 7).
+- Si se ingresan los valores de Juan Carlos Sánchez, se generan exactamente sus 4 recomendaciones institucionales (coaching, comités, prueba 50/50 y mentoría).
+- Si se ingresan valores de otros perfiles (Técnico Brillante, Tradicionalista, etc.), el plan de mejora se orienta a sus áreas específicas.
+- Se mantiene el esquema gráfico en una sección colapsable al final de la página.
 
-## Archivos Creados
-- `src/index.html` — Formulario semántico + zona de resultado.
-- `src/css/styles.css` — Variables CSS, layout Grid/Flexbox, estados de decisión.
-- `src/js/agentLogic.js` — Motor puro: `validarEntradas()` + `evaluarDesempeno()`.
-- `src/js/app.js` — Controlador UI: captura, validación, render.
+## Archivos Actualizados
+- `src/index.html` — Layout clásico limpio con barra discreta de casos de referencia.
+- `src/css/styles.css` — Estilos sobrios y clásicos, eliminados bloques invasivos.
+- `src/js/agentLogic.js` — Generador de recomendaciones dinámicas y puras.
+- `src/js/app.js` — Manejo limpio de eventos y renderizado de resultados.
 
 ## Aprendizajes Técnicos
-- El patrón `counter-reset` / `counter-increment` en CSS permite numeración automática
-  de las recomendaciones sin JS adicional.
-- Usar `type="number"` + validación JS explícita es más robusto que confiar solo en atributos HTML.
-
-## Próximos Pasos
-1. Revisar la aplicación en el navegador y ejecutar los 8 casos de prueba del spec.
+- Modularizar catálogos de recomendaciones por perfil preservando la función pura garantiza escalabilidad sin violentar las restricciones de `CONSTITUTION.md`.
