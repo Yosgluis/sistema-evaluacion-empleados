@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%" style="background:#0f172a; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#aa820a"/>
+    </linearGradient>
+    <linearGradient id="ascenderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="despedirGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#991b1b"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="mantenerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Marker Arrow -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrow-gold" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Background Pattern Lines -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="580" x2="1200" y2="580"/>
+  </g>
+
+  <!-- TITLE BLOCK -->
+  <g transform="translate(60, 25)">
+    <rect width="1080" height="90" rx="12" fill="#1a2744" stroke="#c8a84b" stroke-width="2" filter="url(#shadow)"/>
+    <text x="540" y="40" font-size="22" font-weight="700" fill="#f8fafc" text-anchor="middle" letter-spacing="0.5">PREMIUM CONSULTORES — SECUENCIA DE DECISIÓN GERENCIAL 360°</text>
+    <text x="540" y="68" font-size="14" fill="#cbd5e1" text-anchor="middle">Evaluación de Competencias (Escala 1 a 10) | Caso Juan Carlos Sánchez vs. Roles Directivos</text>
+  </g>
+
+  <!-- STEP 1: INPUT BOX (5 COMPETENCIES) -->
+  <g transform="translate(60, 135)">
+    <rect width="1080" height="95" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="25" y="30" font-size="13" font-weight="700" fill="#c8a84b" text-transform="uppercase" letter-spacing="1">1. Entrada: Evaluación 360° (Puntuación 1 a 10)</text>
+
+    <!-- 5 Competency Badges -->
+    <!-- Comp 1 -->
+    <rect x="25" y="45" width="195" height="38" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="122" y="68" font-size="12" font-weight="600" fill="#e2e8f0" text-anchor="middle">📊 Producción (Técnica)</text>
+
+    <!-- Comp 2 -->
+    <rect x="235" y="45" width="195" height="38" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="332" y="68" font-size="12" font-weight="600" fill="#e2e8f0" text-anchor="middle">💡 Iniciativa</text>
+
+    <!-- Comp 3 -->
+    <rect x="445" y="45" width="195" height="38" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="542" y="68" font-size="12" font-weight="600" fill="#e2e8f0" text-anchor="middle">🗣️ Comunicación</text>
+
+    <!-- Comp 4 -->
+    <rect x="655" y="45" width="195" height="38" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="752" y="68" font-size="12" font-weight="600" fill="#e2e8f0" text-anchor="middle">🤝 Relaciones Interpers.</text>
+
+    <!-- Comp 5 -->
+    <rect x="865" y="45" width="190" height="38" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="960" y="68" font-size="12" font-weight="600" fill="#e2e8f0" text-anchor="middle">🔄 Manejo del Cambio</text>
+  </g>
+
+  <!-- CONNECTING ARROW DOWN TO EVALUATION -->
+  <line x1="600" y1="230" x2="600" y2="265" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- STEP 2: SEQUENTIAL EVALUATION NODE -->
+  <g transform="translate(380, 265)">
+    <rect width="440" height="46" rx="23" fill="#1a2744" stroke="#60a5fa" stroke-width="2" filter="url(#shadow)"/>
+    <text x="220" y="28" font-size="14" font-weight="700" fill="#93c5fd" text-anchor="middle">⚡ Matriz Lógica de Decisión Secuencial</text>
+  </g>
+
+  <!-- BRANCH LINES -->
+  <!-- Left to Despedir -->
+  <path d="M 440 311 L 440 345 L 200 345 L 200 375" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Middle to Mantener -->
+  <path d="M 600 311 L 600 375" fill="none" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrow-gold)"/>
+  <!-- Right to Ascender -->
+  <path d="M 760 311 L 760 345 L 1000 345 L 1000 375" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- CRITERIA LABELS OVER LINES -->
+  <rect x="80" y="335" width="240" height="22" rx="4" fill="#1e293b" stroke="#7f1d1d"/>
+  <text x="200" y="350" font-size="11" fill="#fca5a5" text-anchor="middle" font-weight="600">Producción &lt; 5  Ó  (Relaciones ≤ 2 Y Prod &lt; 7)</text>
+
+  <rect x="470" y="335" width="260" height="22" rx="4" fill="#1e293b" stroke="#78350f"/>
+  <text x="600" y="350" font-size="11" fill="#fcd34d" text-anchor="middle" font-weight="600">Producción ≥ 7  Y  (Soft Skills &lt; 7)</text>
+
+  <rect x="870" y="335" width="260" height="22" rx="4" fill="#1e293b" stroke="#064e3b"/>
+  <text x="1000" y="350" font-size="11" fill="#6ee7b7" text-anchor="middle" font-weight="600">Producción ≥ 8, Inic ≥ 8  Y  Soft Skills ≥ 7</text>
+
+  <!-- DECISION CARDS -->
+
+  <!-- CARD 1: DESPEDIR -->
+  <g transform="translate(60, 380)">
+    <rect width="280" height="150" rx="10" fill="#1e1e2d" stroke="#ef4444" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="280" height="38" rx="10" fill="url(#despedirGrad)"/>
+    <text x="140" y="24" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">❌ DESPEDIR</text>
+    <text x="140" y="58" font-size="12" font-weight="700" fill="#f87171" text-anchor="middle">No Viable / Clima Crítico</text>
+    <text x="15" y="80" font-size="11.5" fill="#cbd5e1">
+      <tspan x="15" dy="0">• Resultados comerciales deficientes</tspan>
+      <tspan x="15" dy="16">  o daño relacional severo que no</tspan>
+      <tspan x="15" dy="16">  compensa el rendimiento.</tspan>
+      <tspan x="15" dy="18">• Preserva valores y clima laboral.</tspan>
+    </text>
+  </g>
+
+  <!-- CARD 2: MANTENER EN PUESTO (CENTRAL / PROMINENT) -->
+  <g transform="translate(380, 380)">
+    <rect width="440" height="150" rx="10" fill="#1e1e2d" stroke="#f59e0b" stroke-width="2.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="440" height="38" rx="10" fill="url(#mantenerGrad)"/>
+    <text x="220" y="24" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">⚠️ MANTENER EN EL PUESTO</text>
+    <text x="220" y="58" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">Consultor Senior + Plan de Mejora Obligatorio</text>
+    <text x="20" y="80" font-size="11.5" fill="#f1f5f9">
+      <tspan x="20" dy="0">• Caso Juan Carlos Sánchez: Alta productividad (17% cuota mercado),</tspan>
+      <tspan x="20" dy="16">  pero graves deficiencias en trabajo en equipo y apego a normas.</tspan>
+      <tspan x="20" dy="18">• Se protege el negocio mientras se exige alineación cultural obligatoria.</tspan>
+    </text>
+  </g>
+
+  <!-- CARD 3: ASCENDER -->
+  <g transform="translate(860, 380)">
+    <rect width="280" height="150" rx="10" fill="#1e1e2d" stroke="#10b981" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="280" height="38" rx="10" fill="url(#ascenderGrad)"/>
+    <text x="140" y="24" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">⭐ ASCENDER</text>
+    <text x="140" y="58" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">Director General de Finanzas / Socio</text>
+    <text x="15" y="80" font-size="11.5" fill="#cbd5e1">
+      <tspan x="15" dy="0">• Excelencia técnica y comercial,</tspan>
+      <tspan x="15" dy="16">  liderazgo mediante el ejemplo,</tspan>
+      <tspan x="15" dy="16">  comunicación y vivencia de valores.</tspan>
+      <tspan x="15" dy="18">• Máxima jerarquía y socio director.</tspan>
+    </text>
+  </g>
+
+  <!-- CONNECTING ARROW FROM MANTENER TO PLAN DE MEJORA -->
+  <line x1="600" y1="530" x2="600" y2="565" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrow-gold)"/>
+
+  <!-- STEP 3: ACTION PLAN FOR MANTENER (4 PILLARS) -->
+  <g transform="translate(60, 570)">
+    <rect width="1080" height="290" rx="12" fill="#131d35" stroke="#c8a84b" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="1080" height="36" rx="12" fill="#1a2744"/>
+    <text x="540" y="24" font-size="14" font-weight="700" fill="#fcd34d" text-anchor="middle" letter-spacing="0.5">
+      📋 PLAN DE ACCIÓN Y RECOMENDACIONES ORIENTADAS A LA MEJORA DEL EMPLEADO (CASO: MANTENER)
+    </text>
+
+    <!-- 4 Pillar Cards -->
+    <!-- Pillar 1 -->
+    <g transform="translate(20, 50)">
+      <rect width="245" height="215" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+      <rect width="245" height="30" rx="8" fill="#1e3a8a"/>
+      <text x="122" y="20" font-size="12" font-weight="700" fill="#93c5fd" text-anchor="middle">1. Coaching &amp; Asertividad</text>
+      <text x="15" y="52" font-size="11" fill="#cbd5e1">
+        <tspan x="15" dy="0" font-weight="600" fill="#f8fafc">Objetivo:</tspan>
+        <tspan x="15" dy="14">Eliminar agresividad y trato</tspan>
+        <tspan x="15" dy="14">impaciente hacia pares y equipo.</tspan>
+        <tspan x="15" dy="18" font-weight="600" fill="#f8fafc">Acciones:</tspan>
+        <tspan x="15" dy="14">• Inteligencia emocional 1 a 1.</tspan>
+        <tspan x="15" dy="14">• Técnicas de escucha activa.</tspan>
+        <tspan x="15" dy="14">• Canales formales de diálogo.</tspan>
+        <tspan x="15" dy="18" font-weight="600" fill="#f8fafc">Meta:</tspan>
+        <tspan x="15" dy="14">Comunicación ≥ 7 pts en 360°.</tspan>
+      </text>
+    </g>
+
+    <!-- Pillar 2 -->
+    <g transform="translate(285, 50)">
+      <rect width="245" height="215" rx="8" fill="#1e293b" stroke="#0ea5e9" stroke-width="1.5"/>
+      <rect width="245" height="30" rx="8" fill="#0369a1"/>
+      <text x="122" y="20" font-size="12" font-weight="700" fill="#7dd3fc" text-anchor="middle">2. Gobernanza &amp; Procesos</text>
+      <text x="15" y="52" font-size="11" fill="#cbd5e1">
+        <tspan x="15" dy="0" font-weight="600" fill="#f8fafc">Objetivo:</tspan>
+        <tspan x="15" dy="14">Frenar decisiones inconsultas y</tspan>
+        <tspan x="15" dy="14">estilo individualista ("por la libre").</tspan>
+        <tspan x="15" dy="18" font-weight="600" fill="#f8fafc">Acciones:</tspan>
+        <tspan x="15" dy="14">• Comités técnicos semanales.</tspan>
+        <tspan x="15" dy="14">• Validación previa de cambios.</tspan>
+        <tspan x="15" dy="14">• Documentación de procesos.</tspan>
+        <tspan x="15" dy="18" font-weight="600" fill="#f8fafc">Meta:</tspan>
+        <tspan x="15" dy="14">Manejo de Cambio normado.</tspan>
+      </text>
+    </g>
+
+    <!-- Pillar 3 -->
+    <g transform="translate(550, 50)">
+      <rect width="245" height="215" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+      <rect width="245" height="30" rx="8" fill="#b45309"/>
+      <text x="122" y="20" font-size="12" font-weight="700" fill="#fde68a" text-anchor="middle">3. Prueba 6 Meses (50/50)</text>
+      <text x="15" y="52" font-size="11" fill="#cbd5e1">
+        <tspan x="15" dy="0" font-weight="600" fill="#f8fafc">Objetivo:</tspan>
+        <tspan x="15" dy="14">Condicionar el ascenso prometido</tspan>
+        <tspan x="15" dy="14">a liderazgo integral comprobado.</tspan>
+        <tspan x="15" dy="18" font-weight="600" fill="#f8fafc">Ponderación:</tspan>
+        <tspan x="15" dy="14">• 50% Cuota y negocio financiero.</tspan>
+        <tspan x="15" dy="14">• 50% Clima y evaluación 360°.</tspan>
+        <tspan x="15" dy="18" font-weight="600" fill="#f8fafc">Meta:</tspan>
+        <tspan x="15" dy="14">Aprobación unánime de pares.</tspan>
+      </text>
+    </g>
+
+    <!-- Pillar 4 -->
+    <g transform="translate(815, 50)">
+      <rect width="245" height="215" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+      <rect width="245" height="30" rx="8" fill="#047857"/>
+      <text x="122" y="20" font-size="12" font-weight="700" fill="#a7f3d0" text-anchor="middle">4. Mentoría con Arnoldo H.</text>
+      <text x="15" y="52" font-size="11" fill="#cbd5e1">
+        <tspan x="15" dy="0" font-weight="600" fill="#f8fafc">Objetivo:</tspan>
+        <tspan x="15" dy="14">Alineación directa con los valores</tspan>
+        <tspan x="15" dy="14">de respeto y dignidad humana.</tspan>
+        <tspan x="15" dy="18" font-weight="600" fill="#f8fafc">Acciones:</tspan>
+        <tspan x="15" dy="14">• Sesiones quincenales de feedback.</tspan>
+        <tspan x="15" dy="14">• Modelado de liderazgo directivo.</tspan>
+        <tspan x="15" dy="14">• Canalización de energía comercial.</tspan>
+        <tspan x="15" dy="18" font-weight="600" fill="#f8fafc">Meta:</tspan>
+        <tspan x="15" dy="14">Identidad con visión de la firma.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
